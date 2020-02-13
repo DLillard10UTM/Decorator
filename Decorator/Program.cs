@@ -1,5 +1,11 @@
 ﻿using System;
 
+
+/*
+ * Author: Danny Lillard
+ * Date 2.12.2020
+ * Description: Main driver, calls decorators in an intuitive manner.
+ */
 namespace Decorator
 {
     class Program
