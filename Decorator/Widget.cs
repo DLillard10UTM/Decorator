@@ -47,10 +47,10 @@ namespace Decorator
 
     public class BorderDecorator : Decorator
     {
-        
+
         public BorderDecorator(Widget w) : base(w)
         {
-            
+
         }
 
         public override void draw()
@@ -70,6 +70,20 @@ namespace Decorator
         public override void draw()
         {
             Console.Write("Scroll Decorator! Containing: ");
+            base.draw();
+        }
+    }
+
+    public class BlueShadeBlocker : Decorator
+    {
+        public BlueShadeBlocker(Widget w) : base(w)
+        {
+
+        }
+
+        public override void draw()
+        {
+            Console.Write("Blue shade blocker Decorator! Containing: ");
             base.draw();
         }
     }

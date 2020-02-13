@@ -7,16 +7,9 @@ namespace Decorator
         static void Main(string[] args)
         {
             Widget wid;
-            BorderDecorator border;
-            ScrollDecorator scroll;
 
-            wid = new TextField(4, 5);
-            border = new BorderDecorator(wid);
-            scroll = new ScrollDecorator(border);
-
+            wid = new BlueShadeBlocker(new ScrollDecorator(new BorderDecorator(new TextField(4, 5))));
             wid.draw();
-            border.draw();
-            scroll.draw();
             Console.ReadKey();
         }
     }
