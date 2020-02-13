@@ -8,12 +8,15 @@ namespace Decorator
         {
             Widget wid;
             BorderDecorator border;
+            ScrollDecorator scroll;
 
             wid = new TextField(4, 5);
             border = new BorderDecorator(wid);
+            scroll = new ScrollDecorator(border);
 
             wid.draw();
             border.draw();
+            scroll.draw();
             Console.ReadKey();
         }
     }

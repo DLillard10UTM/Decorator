@@ -39,7 +39,7 @@ namespace Decorator
         {
             wid = w;
         }
-        public void draw()
+        public virtual void draw()
         {
             wid.draw();
         }
@@ -47,15 +47,15 @@ namespace Decorator
 
     public class BorderDecorator : Decorator
     {
-        private Widget wid;
+        
         public BorderDecorator(Widget w) : base(w)
         {
-            wid = w;
+            
         }
 
-        public void draw()
+        public override void draw()
         {
-            Console.WriteLine("Border Decorator! Containing: ");
+            Console.Write("Border Decorator! Containing: ");
             base.draw();
         }
     }
@@ -67,9 +67,10 @@ namespace Decorator
 
         }
 
-        public new void draw()
+        public override void draw()
         {
-
+            Console.Write("Scroll Decorator! Containing: ");
+            base.draw();
         }
     }
 }
